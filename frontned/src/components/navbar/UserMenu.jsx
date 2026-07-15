@@ -108,7 +108,7 @@ function UserMenu({ onAction }) {
             setIsOpen(true);
           }
         }}
-        className="inline-flex max-w-[210px] items-center gap-2 rounded-full border border-rose-100 bg-white/80 px-2.5 py-2 shadow-soft transition hover:border-rose-200 hover:bg-white focus:outline-none focus:ring-4 focus:ring-primary/15"
+        className="inline-flex max-w-[210px] items-center gap-2 rounded-full border border-white/70 bg-[rgba(255,255,255,0.88)] px-2.5 py-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition duration-300 hover:border-rose-200 hover:bg-white focus:outline-none focus:ring-4 focus:ring-primary/15"
       >
         {currentUser.avatar ? (
           <img src={currentUser.avatar} alt="" className="h-9 w-9 rounded-full object-cover" />
@@ -117,7 +117,7 @@ function UserMenu({ onAction }) {
             {userInitial}
           </span>
         )}
-        <span className="min-w-0 truncate text-sm font-semibold text-text">{currentUser.fullName}</span>
+        <span className="min-w-0 truncate text-sm font-semibold text-[#111827]">{currentUser.fullName}</span>
         {currentUser.role ? (
           <span className="hidden rounded-full bg-rose-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-primary sm:inline">
             {currentUser.role}
@@ -135,7 +135,7 @@ function UserMenu({ onAction }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -6, scale: 0.98 }}
             transition={{ duration: 0.16, ease: 'easeOut' }}
-            className="absolute right-0 z-50 mt-3 w-48 overflow-hidden rounded-2xl border border-rose-100 bg-white p-2 shadow-soft"
+            className="absolute right-0 z-50 mt-3 w-48 overflow-hidden rounded-2xl border border-white/70 bg-[rgba(255,255,255,0.95)] p-2 shadow-[0_10px_34px_rgba(0,0,0,0.1)] backdrop-blur-[18px]"
           >
             {menuItems.map((item, index) => {
               const Icon = item.icon;
@@ -153,7 +153,7 @@ function UserMenu({ onAction }) {
                   role="menuitem"
                   tabIndex={0}
                   onClick={closeMenu}
-                  className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-rose-50 hover:text-primary focus:bg-rose-50 focus:text-primary focus:outline-none"
+                  className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-[#111827] transition duration-250 hover:bg-rose-50 hover:text-primary focus:bg-rose-50 focus:text-primary focus:outline-none"
                 >
                   <Icon size={17} />
                   {item.label}
@@ -167,7 +167,7 @@ function UserMenu({ onAction }) {
                 itemRefs.current[menuItems.length] = element;
               }}
               onClick={handleLogout}
-              className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-slate-700 transition hover:bg-rose-50 hover:text-primary focus:bg-rose-50 focus:text-primary focus:outline-none"
+              className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-semibold text-[#111827] transition duration-250 hover:bg-rose-50 hover:text-primary focus:bg-rose-50 focus:text-primary focus:outline-none"
             >
               <FiLogOut size={17} />
               Logout
