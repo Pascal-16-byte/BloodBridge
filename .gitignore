@@ -1,0 +1,29 @@
+# Node
+node_modules/
+dist/
+build/
+
+# React
+.vite/
+
+# Java
+target/
+*.class
+
+# IntelliJ
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

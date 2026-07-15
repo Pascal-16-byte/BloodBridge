@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #fff8f8;
+  color: #2c2c2c;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.85) inset;
+  -webkit-text-fill-color: #2c2c2c;
+}
+
+.auth-date-input {
+  color-scheme: light;
+}
+
+.auth-date-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  margin-right: -2px;
+  opacity: 0.55;
+  padding: 6px;
+}
+
+.auth-date-input::-webkit-datetime-edit {
+  min-width: 0;
+}
+
+.glass-surface {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(255, 247, 247, 0.74));
+  backdrop-filter: blur(18px);
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, rgba(255, 205, 210, 0.24) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 205, 210, 0.24) 100%);
+  background-size: 200% 100%;
+}
+
+::selection {
+  background: rgba(229, 57, 53, 0.2);
+  color: #7f1313;
+}
