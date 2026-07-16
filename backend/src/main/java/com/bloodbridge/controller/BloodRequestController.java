@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class BloodRequestController {
 
-    private final BloodRequestService bloodRequestService;
+    private final BloodRequestService bloodRequestService = null;
 
     @PostMapping
     public ResponseEntity<ApiResponse<BloodRequestResponse>> create(@Valid @RequestBody BloodRequestRequest request) {

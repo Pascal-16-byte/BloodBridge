@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class AdminController {
 
-    private final UserService userService;
+    private final UserService userService = null;
 
     @GetMapping("/users")
     public ResponseEntity<ApiResponse<List<UserResponse>>> users() {
